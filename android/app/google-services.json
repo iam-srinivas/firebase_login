@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "10750917435",
+    "firebase_url": "https://repo3-107b9.firebaseio.com",
+    "project_id": "repo3-107b9",
+    "storage_bucket": "repo3-107b9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:10750917435:android:6fef9f2a1159b152f4551e",
+        "android_client_info": {
+          "package_name": "com.example.folk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "10750917435-gpuncuc3a562fv0rb3l8iltm5vfa30jl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7CljaYDxySCRBrFJ3r_632IfhCh-VPiw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "10750917435-gpuncuc3a562fv0rb3l8iltm5vfa30jl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
