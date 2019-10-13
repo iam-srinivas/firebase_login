@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'actions.dart';
 
 class FolkList extends StatefulWidget {
   @override
@@ -27,10 +28,12 @@ class _FolkListState extends State<FolkList> {
                 itemBuilder: (BuildContext context, index) {
                   return ListTile(
                     title: Text(snapshot.data.documents[index]['name']),
-                    subtitle: Text(
-                        'Uid:${snapshot.data.documents[index]['uId'].toString()}'),
+                    subtitle:
+                        Text(snapshot.data.documents[index]['uId'].toString()),
                     trailing: Text(snapshot.data.documents[index]['email']),
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushReplacementNamed(context, "/a");
+                    },
                   );
                 },
               );
@@ -38,6 +41,9 @@ class _FolkListState extends State<FolkList> {
           ),
         ),
       ),
+      routes: <String, WidgetBuilder>{
+        "/a": (BuildContext context) => ActionPage(),
+      },
     );
   }
 }

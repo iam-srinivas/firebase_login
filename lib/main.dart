@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:folk/actions.dart';
 import 'package:folk/folklist.dart';
 import 'package:folk/homepage.dart';
 import 'package:folk/loginpage.dart';
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
         "/LoginPage": (BuildContext context) => LoginPage(),
         "/SignupPage": (BuildContext context) => SignupPage(),
         "/FolkList": (BuildContext context) => FolkList(),
+        "/a": (BuildContext context) => ActionPage(),
       },
     );
   }
