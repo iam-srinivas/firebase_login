@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class SignupPage extends StatefulWidget {
   @override
@@ -20,7 +21,7 @@ class _SignupPageState extends State<SignupPage> {
   }
 
   navigateToLogin() {
-    Navigator.pushNamed(context, "/LoginPage");
+    Navigator.pushReplacementNamed(context, "/LoginPage");
   }
 
   @override
@@ -58,6 +59,11 @@ class _SignupPageState extends State<SignupPage> {
           UserUpdateInfo updateUser = UserUpdateInfo();
           updateUser.displayName = _name;
           user.updateProfile(updateUser);
+          Firestore.instance.collection('folks').add({
+            'name': _name,
+            'email': _email,
+            'uId': user.uid,
+          });
         }
       } catch (e) {
         showError(e.message);

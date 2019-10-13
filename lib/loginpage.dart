@@ -21,7 +21,7 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   navigateToSignup() {
-    Navigator.pushNamed(context, "/SignupPage");
+    Navigator.pushReplacementNamed(context, "/SignupPage");
   }
 
   void initState() {

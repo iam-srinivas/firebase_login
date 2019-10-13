@@ -27,9 +27,9 @@ class _FolkListState extends State<FolkList> {
                 itemBuilder: (BuildContext context, index) {
                   return ListTile(
                     title: Text(snapshot.data.documents[index]['name']),
-                    trailing: Text(snapshot.data.documents[index]['isVerified']
-                        .toString()),
-                    subtitle: Text(snapshot.data.documents[index]['email']),
+                    subtitle: Text(
+                        'Uid:${snapshot.data.documents[index]['uId'].toString()}'),
+                    trailing: Text(snapshot.data.documents[index]['email']),
                     onTap: () {},
                   );
                 },
