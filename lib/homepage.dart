@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -65,6 +64,21 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                     ),
+                    Container(
+                        padding: EdgeInsets.all(10),
+                        child: RaisedButton(
+                          onPressed: () {
+                            Navigator.pushNamed(context, "/FolkList");
+                          },
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(5)),
+                          child: Text(
+                            'View List of Students',
+                            style: TextStyle(fontSize: 20, color: Colors.white),
+                          ),
+                          color: Colors.blue,
+                          padding: EdgeInsets.fromLTRB(40, 20, 40, 20),
+                        )),
                     Container(
                       padding: EdgeInsets.all(20),
                       child: RaisedButton(
